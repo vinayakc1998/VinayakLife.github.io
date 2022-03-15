@@ -48,6 +48,11 @@ emailjs.init("user_H0bNnngt4VrhttKoETS6K");
   * Author: BootstrapMade.com
   * License: https://bootstrapmade.com/license/
   ======================================================== -->
+
+ 
+
+
+
 </head>
 
 <body>
@@ -74,7 +79,7 @@ emailjs.init("user_H0bNnngt4VrhttKoETS6K");
   <!-- ======= Hero Section ======= -->
   <section id="hero" class="d-flex flex-column justify-content-center">
     <div class="container" data-aos="zoom-in" data-aos-delay="100">
-      <h1>Vinayak chaudhari</h1>
+      <h1>Vinayak Chaudhari</h1>
       <p>I'm <span class="typed" data-typed-items="Software Developer,Web Developer, Gamer, Mechanical Engineer"></span></p>
       <div class="social-links">
         <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
@@ -117,17 +122,21 @@ I am a passionate individual who if given a chance would be comfortable with any
               <div class="col-lg-6">
                 <ul>
                   <li><i class="bi bi-chevron-right"></i> <strong>Birthday:</strong> <span>12 Sep 1998</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Website:</strong> <span>www.vinayak.online</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Website:<a href="https://vchaudhari.in.net"> wwww.vchaudhari.in.net</a></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>Phone:</strong> <span>8983955920</span></li>
                   <li><i class="bi bi-chevron-right"></i> <strong>City:</strong> <span>Jalgaon , Pune</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>23</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>BE</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Email:</strong> <span>vinu.137002@gmail.com</span></li>
+                  <li><i class="bi bi-chevron-right"></i> <strong>Company:</strong> <span>Senior Associate at Crisil limited</span></li>
+                  <li><a href="Vinayak Resume.pdf"> <button class="btn btn-primary">Download CV</button></a></li>
                 </ul>
+
+
               </div>
               <div class="col-lg-6">
                 <ul>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Age:</strong> <span>23</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Degree:</strong> <span>BE</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>PhEmailone:</strong> <span>vinu.137002@gmail.com</span></li>
-                  <li><i class="bi bi-chevron-right"></i> <strong>Senior Associate at Crisil limited</strong> <span></span></li>
+                  
                 </ul>
               </div>
             </div>
@@ -236,20 +245,18 @@ I am a passionate individual who if given a chance would be comfortable with any
           </div>
           <div class="col-lg-6">
             <h3 class="resume-title">Education </h3>
-            <div class="resume-item">
-            
-            
+            <div class="resume-item pb-0">
               <p><em> </em></p>
-              <div class="resume-item">
                 <h4>DIPLOMA IN ADVANCED COMPUTING </h4>
                 <h5>2021</h5>
                  <h4>B.E. IN MECHANICAL ENGINEERING </h4>
                 <h5>2017 - 2020</h5>
                  <h4>DIPLOMA IN MECHANICAL ENGINEERING </h4>
                 <h5>2014 - 2017</h5>
-               
-       
               </div>
+              </div>
+          </div>
+        </div>
     </section><!-- End Resume Section -->
 
 
@@ -357,7 +364,7 @@ I am a passionate individual who if given a chance would be comfortable with any
             
             
              <div class="col-lg-8 mt-5 mt-lg-0">
-		 <form calss="form" method="post" autocomplete="off" name="google-sheet" autocomplete="off">  
+		 <form class="form" method="post"   action="javascript:sendmail()">  
 <!-- 			        <form calss="form" name="contact" method="POST" data-netlify="true"  autocomplete="off"> -->
               <div class="row">
                 <div class="col-md-6 form-group">
@@ -384,7 +391,7 @@ I am a passionate individual who if given a chance would be comfortable with any
 
 
     
-
+<!-- 	
 
   <script type="text/javascript">
 	  const scriptURL = 'https://script.google.com/macros/s/AKfycbxToFvoX6SC6rVPtZTl9Gnw-LiHKtw3q0zXuZ4TrQcnEocYX_ST5tsHsK3OCoRERbpm1A/exec'
@@ -409,7 +416,7 @@ I am a passionate individual who if given a chance would be comfortable with any
    return false; // Prevent page refresh
 }
   </script>
-
+-->
            
 					 
 <!-- 	
@@ -444,27 +451,7 @@ I am a passionate individual who if given a chance would be comfortable with any
       </div> -->
     
 		  
-		  
-		
 	
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
-		  
 		  
 <!-- 		  
 <div class="row">
@@ -565,6 +552,58 @@ I am a passionate individual who if given a chance would be comfortable with any
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
+
+
+
+
+  <script
+  src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+<script src="https://smtpjs.com/v3/smtp.js"></script>
+ 
+<script>  
+
+     function sendmail(){
+    
+			var name = $('#name').val();
+			var email = $('#email').val();
+			var subject = $('#subject').val();
+      var message = $('#message').val();
+
+			// var body = $('#body').val();
+
+			var Body='Name: '+name+'<br>Email: '+email+'<br>Subject: '+subject+'<br>Message: '+message;
+			//console.log(name, phone, email, message);
+
+			Email.send({
+        SecureToken:"ebfcf492-08d0-465f-9e50-fcabd188fd50",
+				To: 'vinu.137002@gmail.com',
+				From: "vinu.137002@gmail.com",
+				Subject: "New message on contact from "+name,
+				Body: Body
+			}).then(
+				message =>{
+					//console.log (message);
+					if(message=='OK'){
+					alert('Your mail has been send. Thank you for connecting.');
+					}
+					else{
+						console.error (message);
+						alert('There is error at sending message. ')
+						
+					}
+
+				}
+			);
+
+
+
+		}
+
+
+    </script>
+ </script>
 
 </body>
 
